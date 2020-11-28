@@ -37,9 +37,6 @@ const Home = () => {
     const classes = useStyles()
     return (
         <div className="container">
-            <div className="header">
-                <NavBar/>
-            </div>
             <main className={classes.root}>
                 <div className={classes.carousel}>
                     <Carousel/>

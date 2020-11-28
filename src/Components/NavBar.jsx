@@ -8,6 +8,8 @@ import SearchIcon from '@material-ui/icons/Search';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
+import { NavLink, Redirect } from 'react-router-dom';
+
 
 const useStyles = makeStyles((theme) => ({
   grow: {
@@ -15,41 +17,41 @@ const useStyles = makeStyles((theme) => ({
   },
 
   search:{
-    backgroundColor:'#fff',
     width:'auto',
     borderRadius:theme.shape.borderRadius,
+    backgroundColor:fade(theme.palette.common.white,0.2),
     display:'flex',
     justifyContent:'flex-end',
     alignItems:'flex-end',
     position:'relative',
   },
   searchIcon:{
-    color:fade(theme.palette.common.black,0.50),
-    height:'100%',
-    position:'absolute',
-    display:'flex',
-    alignItems:'center',
-    justifyContent:'center',
-    zIndex:'3',
+      color:'#000',
+      fontSize:'0.2rem',
+      backgroundColor:'#f5c518',
+      borderBottomLeftRadius:'0px',
+      borderTopLeftRadius:'0px',
+      '&:hover':{
+        backgroundColor:'#f5c518',
+      }
   },
   inputRoot: {
-    color: '#000',
+    color: fade(theme.palette.common.white,0.90),
   },
   inputInput: {
     padding: theme.spacing(1, 1, 0.58, 0),
     // vertical padding + font size from searchIcon
     paddingLeft:'4px',
     width: '100%',
-    zIndex:'2',
     [theme.breakpoints.up('md')]: {
       width: '30ch',
     },
     borderRadius:theme.shape.borderRadius,
-    border:'1px solid #fff',
+    
     transition: theme.transitions.create('width'),
     '&:focus':{
-        boxShadow:'inset 0 0 0 1px #f5c518',
-        border: '1px solid #f5c518',
+        boxShadow:'inset 0 0 0 2px #f5c518',
+        
     },
   },
   root:{
@@ -96,6 +98,10 @@ const useStyles = makeStyles((theme) => ({
   },
   Buttons:{
     color:'#fff',
+    textDecoration:'none',
+    textTransform:'uppercase',
+    fontSize:'0.9rem',
+    fontWeight:'800',  
     '&:hover':{
       color:'#f5c518',
     }
@@ -111,6 +117,8 @@ const useStyles = makeStyles((theme) => ({
 
 export default function PrimarySearchAppBar() {
   const classes = useStyles();
+  
+  
 
     const renderSearch =(
       <InputBase
@@ -133,27 +141,24 @@ export default function PrimarySearchAppBar() {
               Test
             </Typography>
             <div className={classes.containerButton}>
-              <Button variant="text" color="primary" className={classes.Buttons}>
-                  Peliculas
-              </Button>
-              <Button variant="text" color="primary" className={classes.Buttons}>
-                  Series
-              </Button>
-              <Button variant="text" color="primary" className={classes.Buttons}>
-                  Juegos
-              </Button>
+                <NavLink to='/' className={classes.Buttons}>
+                    Inicio
+                </NavLink>
+
             </div>
          </div>
           <div className={classes.search}>
-              <div className={classes.searchIcon}>
-                <SearchIcon/>
-              </div>
+              
               {renderSearch}
+              <Button className={classes.searchIcon} size="small">
+                  <SearchIcon/>
+              </Button>
           </div>
           <div className={classes.containerButtonUsers}>
-              <Button variant="outlined" color="primary" className={classes.botonR}>
-                  Ingresar
-              </Button>
+              <NavLink to='/login' className={classes.Buttons}>
+                  Iniciar sesion
+              </NavLink>
+              
               <Button variant="text" color="primary" className={classes.botonS}>
                   Registrarse
               </Button>
