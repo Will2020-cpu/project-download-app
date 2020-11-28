@@ -1,12 +1,22 @@
 import React,{ Fragment } from 'react';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper'
+import {makeStyles} from '@material-ui/core/styles';
+
+const useStyles = makeStyles((theme)=>({
+    root:{
+        width:'90%',
+        margin:'0 auto',
+    }
+}))
+
 
 const Login = () => {
+    const classes = useStyles()
     return (
         <Fragment>
-           <div>
-            <Grid container>
+           <div className={classes.root}>
+            <Grid container spacing={3}>
                 <Grid item lg={5}>
                         <Paper>Ingresa y accede con tus amigos</Paper>
                 </Grid>
