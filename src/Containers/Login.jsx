@@ -7,6 +7,7 @@ const useStyles = makeStyles((theme)=>({
     root:{
         width:'90%',
         margin:'0 auto',
+        padding:'20px',
     }
 }))
 
