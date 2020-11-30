@@ -4,6 +4,7 @@ import Typography from '@material-ui/core/Typography'
 import StarIcon from '@material-ui/icons/Star';
 import { Redirect } from 'react-router-dom';
 import cx from 'clsx';
+import { connect } from 'react-redux';
 
 
 const useStyles = makeStyles((theme) =>({
@@ -55,12 +56,15 @@ const useStyles = makeStyles((theme) =>({
         fontSize:'1rem'
     }
 }))
-const CardCover = ({img,nombre}) => {
+const CardCover = ({img,nombre,Movies}) => {
     const classes = useStyles()
     const [click,setClick] = useState(false)
     const [cover,setCover] = useState('');
     const handleClickCover = (cover) =>{
-        setCover(cover)
+        let arraySeleccionado = Movies.filter(pelicula => pelicula.nombre === cover) 
+        arraySeleccionado.map(item=>(
+            setCover(item.ruta)
+        ))
         setClick(true);
     }
 
@@ -83,4 +87,12 @@ const CardCover = ({img,nombre}) => {
     )
 }
 
-export default CardCover
+
+const mapStateToProps = state =>({
+    Movies: state.peliculas
+})
+
+
+
+
+export default connect(mapStateToProps,null)(CardCover)

@@ -4,55 +4,63 @@
         "nombre": "Volver al Futuro",
         "imgUrl": "https://image.tmdb.org/t/p/original/6eoqf9NYisCfEROlkGJdMLHMQS6.jpg",
         "cover": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/drUbeOWuKYarYpD5E0lGnc6lfqf.jpg",
-        "descripcion": "La historia comienza en 1985 con Marty McFly, un joven normal de diecisiete años de edad que vive con su familia en la ficticia Hill Valley, California. Su padre es un hombre fracasado, tímido y de poco carácter, con un empleo mal pagado donde tiene que soportar los constantes abusos de su jefe, Biff Tannen, quien desde el instituto le ha hecho la vida imposible. Así mismo, uno de sus tíos tiene antecedentes penales y ha sido arrestado en múltiples ocasiones y su familia tiene muchas deudas. El 25 de octubre de ese año Marty visita la casa de su amigo, un científico excéntrico llamado Dr. Emmett L."
+        "descripcion":"Marty McFly es un adolescente amigo de Doc, un científico a los que todos menos él toman por chiflado. Cuando Doc crea una máquina para viajar en el tiempo en forma de un automóvil deportivo, Marty viaja accidentalmente al año 1955. Allí se encontrará con sus padres cuando eran jóvenes, pero impide su primer encuentro. A partir de entonces, y con el tiempo en su contra, McFly deberá conseguir que se enamoren para que se casen y él no deje de existir.",
+        "ruta":"volver-al-futuro"
     },
     {   
         "id":2,
         "nombre":"Deadpool",
         "imgUrl": "https://image.tmdb.org/t/p/original/k2VX0gFu2BEJhvduQTq2ioYp8z7.jpg",
         "cover":"https://image.tmdb.org/t/p/w600_and_h900_bestv2/pcZT1Ouq99dY6J2iGXjMxw16x6o.jpg",
-        "descripcion":"Basado en el anti-héroe menos convencional de la Marvel, Deadpool narra el origen de un ex-operativo de la fuerzas especiales llamado Wade Wilson, reconvertido a mercenario, y que tras ser sometido a un cruel experimento adquiere poderes de curación rápida, adoptando Wade entonces el alter ego de Deadpool. Armado con sus nuevas habilidades y un oscuro y retorcido sentido del humor, Deadpool intentará dar caza al hombre que casi destruye su vida."
+        "descripcion":"Basado en el anti-héroe menos convencional de la Marvel, Deadpool narra el origen de un ex-operativo de la fuerzas especiales llamado Wade Wilson, reconvertido a mercenario, y que tras ser sometido a un cruel experimento adquiere poderes de curación rápida, adoptando Wade entonces el alter ego de Deadpool. Armado con sus nuevas habilidades y un oscuro y retorcido sentido del humor, Deadpool intentará dar caza al hombre que casi destruye su vida.",
+        "ruta":"deadpool"
     },
     {
         "id":3,
         "nombre":"Guardianes de la Galaxia",
         "imgUrl":"https://image.tmdb.org/t/p/original/aJn9XeesqsrSLKcHfHP4u5985hn.jpg",
         "cover":"https://image.tmdb.org/t/p/w600_and_h900_bestv2/kdg6Y06jfq9FV7qknWNcKLYtBJn.jpg",
-        "descripcion":"Una poderosa raza alienígena contrata a los Guardianes para que protejan sus valiosas baterías de energía, pero, cuando Rocket las roba, los alienígenas envían a sus tropas de combate a vengarse de ellos. Mientras tratan de escapar con vida, intentan resolver el misterio de los verdaderos orígenes de Peter Quill."
+        "descripcion":"Una poderosa raza alienígena contrata a los Guardianes para que protejan sus valiosas baterías de energía, pero, cuando Rocket las roba, los alienígenas envían a sus tropas de combate a vengarse de ellos. Mientras tratan de escapar con vida, intentan resolver el misterio de los verdaderos orígenes de Peter Quill.",
+        "ruta":"guardianes-de-la-galaxia"
     },
     {
         "id":4,
         "nombre":"21 Blacjack",
         "imgUrl":"https://image.tmdb.org/t/p/original/u6OCGwhSWhfQX1LZ4NTq0bfcWxs.jpg",
         "cover":"https://image.tmdb.org/t/p/w600_and_h900_bestv2/1c0sybcPnVF1fmVk9JKdG2fH1Au.jpg",
-        "descripcion":"Ben Campbell, un tímido y brillante estudiante del Instituto Tecnológico de Massachussets (MIT), recurre a los naipes para poder pagar la matrícula de la universidad. Se le presenta, además, la oportunidad de unirse a un grupo de estudiantes que viajan a Las Vegas para jugar al blackjack. Bajo la dirección del poco ortodoxo profesor de matemáticas y genio de la estadística Micky Rosa, han conseguido descifrar el código del éxito, mediante el conteo de cartas."
+        "descripcion":"Ben Campbell, un tímido y brillante estudiante del Instituto Tecnológico de Massachussets (MIT), recurre a los naipes para poder pagar la matrícula de la universidad. Se le presenta, además, la oportunidad de unirse a un grupo de estudiantes que viajan a Las Vegas para jugar al blackjack. Bajo la dirección del poco ortodoxo profesor de matemáticas y genio de la estadística Micky Rosa, han conseguido descifrar el código del éxito, mediante el conteo de cartas.",
+        "ruta":"21-blacjack"
     },
     {
         "id":5,
         "nombre":"El Corredor del Laberinto la Cura mortal",
         "imgUrl":"https://image.tmdb.org/t/p/original/bvbyidkMaBls1LTaIWYY6UmYTaL.jpg",
         "cover":"https://image.tmdb.org/t/p/w600_and_h900_bestv2/kuZOnvzplxPVh71t827F19zY5Ab.jpg",
-        "descripcion":"En este final de saga, Thomas lidera a su grupo en una última misión. Deberán entrar en la legendaria Last City, un laberinto controlado por WCKD que puede llegar a ser el laberinto más mortífero de todos. Cualquier persona que lo supere obtendrá las respuestas a las preguntas y los protagonistas quieren saber lo que realmente sucede."
+        "descripcion":"En este final de saga, Thomas lidera a su grupo en una última misión. Deberán entrar en la legendaria Last City, un laberinto controlado por WCKD que puede llegar a ser el laberinto más mortífero de todos. Cualquier persona que lo supere obtendrá las respuestas a las preguntas y los protagonistas quieren saber lo que realmente sucede.",
+        "ruta":"el-corredor-del-laberinto-la-cura-mortal"
     },
     {
         "id":6,
         "nombre":"It: Capitulo 2",
         "imgUrl":"https://image.tmdb.org/t/p/original/8moTOzunF7p40oR5XhlDvJckOSW.jpg",
         "cover":"https://image.tmdb.org/t/p/w600_and_h900_bestv2/9oERKIVyTWpHNum3STVsAGD4ojz.jpg",
-        "descripcion":"Han pasado casi 30 años desde que el Club de los Perdedores, formado por Bill, Beverly, Richie, Ben, Eddie, Mike y Stanley, se enfrentaran al macabro y despiadado Pennywise (Bill Skarsgård). En cuanto tuvieron oportunidad, abandonaron el pueblo de Derry, en el estado de Maine, que tantos problemas les había ocasionado. Sin embargo, ahora, siendo adultos, parece que no pueden escapar de su pasado. Todos deberán enfrentarse de nuevo al temible payaso para descubrir si de verdad están preparados para superar sus traumas de la infancia."
+        "descripcion":"Han pasado casi 30 años desde que el Club de los Perdedores, formado por Bill, Beverly, Richie, Ben, Eddie, Mike y Stanley, se enfrentaran al macabro y despiadado Pennywise (Bill Skarsgård). En cuanto tuvieron oportunidad, abandonaron el pueblo de Derry, en el estado de Maine, que tantos problemas les había ocasionado. Sin embargo, ahora, siendo adultos, parece que no pueden escapar de su pasado. Todos deberán enfrentarse de nuevo al temible payaso para descubrir si de verdad están preparados para superar sus traumas de la infancia.",
+        "ruta":"it-capitulo-2"
     },
     {
         "id":7,
         "nombre":"Mulan",
         "imgUrl":"https://image.tmdb.org/t/p/original/zMrk2G3XsnfYKiIp1NEfdtvDyBH.jpg",
         "cover":"https://image.tmdb.org/t/p/w600_and_h900_bestv2/rd7ElSRYhN2CFqMcyH8rqrwLbd6.jpg",
-        "descripcion":"El emperador de China emite un decreto para reclutar a un varón por cada familia que deberá servir en el ejército imperial para defender al país de los invasores del norte. Hua Mulán, hija única de un condecorado guerrero, se presenta para evitar que su anciano padre sea llamado a filas. Se hace pasar por un hombre, Hua Jun y se somete a todo tipo de pruebas. Para conseguirlo deberá apelar a su fuerza interior y sacar a la luz todo su potencial. Se trata de una aventura épica que la transformará en una guerrera laureada que la hará merecedora del respeto de todo un país y motivo de orgullo para su padre."
+        "descripcion":"El emperador de China emite un decreto para reclutar a un varón por cada familia que deberá servir en el ejército imperial para defender al país de los invasores del norte. Hua Mulán, hija única de un condecorado guerrero, se presenta para evitar que su anciano padre sea llamado a filas. Se hace pasar por un hombre, Hua Jun y se somete a todo tipo de pruebas. Para conseguirlo deberá apelar a su fuerza interior y sacar a la luz todo su potencial. Se trata de una aventura épica que la transformará en una guerrera laureada que la hará merecedora del respeto de todo un país y motivo de orgullo para su padre.",
+        "ruta":"mulan"
     },
     {
         "id":8,
         "nombre":"Ava",
         "imgUrl":"https://image.tmdb.org/t/p/original/ekkuqt9Q2ad1F7xq2ZONP0oq36P.jpg",
         "cover":"https://image.tmdb.org/t/p/w600_and_h900_bestv2/qzA87Wf4jo1h8JMk9GilyIYvwsA.jpg",
-        "descripcion":"Ava es una mortífera asesina a sueldo que trabaja para una organización de operaciones encubiertas, que viaja por todo el mundo acabando con aquellos objetivos que nadie más puede derribar. Cuando uno de sus encargos sale mal, Ava tendrá que luchar por una vida."
+        "descripcion":"Ava es una mortífera asesina a sueldo que trabaja para una organización de operaciones encubiertas, que viaja por todo el mundo acabando con aquellos objetivos que nadie más puede derribar. Cuando uno de sus encargos sale mal, Ava tendrá que luchar por una vida.",
+        "ruta":"ava"
     }
 ]

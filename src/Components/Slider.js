@@ -90,4 +90,4 @@ const mapStateToProps = state => ({
     movies : state.peliculas
 })
 
-export default connect(mapStateToProps)(Carousel)
+export default connect(mapStateToProps,null)(Carousel)
