@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import {useParams} from 'react-router-dom'
 import Typography from '@material-ui/core/Typography'
 import Chip from '@material-ui/core/Chip'
+import StarIcon from '@material-ui/icons/Star';
 
 const useStyles = makeStyles((theme)=>({
     root:{
@@ -13,31 +14,66 @@ const useStyles = makeStyles((theme)=>({
         width:'90%',
         margin:'auto',
         borderRadius:theme.shape.borderRadius,
-        maxWidth:'1300px'
+    },
+    container:{
+        display:'flex',
+        justifyContent:'space-around',
+        alignItems:'flex-end',
+        margin:'0 auto',
+        [theme.breakpoints.down('sm')]:{
+            flexDirection:'column',
+        }
     },
     containerCover:{
-        padding:theme.spacing(2)
+        padding:theme.spacing(2),
+        width:'600px',
+        height:'auto',
     },
     image:{
-        objectFit:'cover',
+        display:'block',
+        height:'auto',  
+        width:'600px',
         maxWidth:'200px',
-        height:'auto',
-        width:'100%'
+        borderRadius:theme.shape.borderRadius,
+        [theme.breakpoints.down('sm')]:{
+            width:'100%'
+        }
     },
     containerText:{
-        width:'60%',
-        padding:'20px'
+        padding:'20px',
+    },
+    containerDescripcion:{
+      padding:'20px 0'
+    },
+    p:{
+        textAlign:'justify',
+        width:'90%',
+        padding:'10px 0'
+    },
+    puntuacion:{
+        display:'flex',
+        alignItems:'center'
+    },
+    number:{
+        fontSize:'1.2rem',
+    },
+    span:{
+        color:'#f5c518'
+    },
+    Title:{
+        padding:'30px 0'
     }
 }))
 
 const Container = styled.div`
-    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,.70)), url(${props => props.image});
+    background-image: linear-gradient(to right, rgba(16.08%, 17.25%, 18.43%, 1.00) 150px, rgba(24.31%, 24.31%, 24.31%, 0.84) 100%), url(${props => props.image});
     background-position: center center;
     background-size: cover;
     min-height: 22.62em;
     color:#fff;
     display:flex;
-    align-items: flex-end;
+    justify-content:center;
+    flex-wrap:'wrap';
     border-radius: 5px;
 `
 
@@ -51,16 +87,33 @@ const MovieInformation = ({movie}) => {
                 {
                     arraySeleccionado.map(item =>(
                         <Container image={item.imgUrl} key={item.id}>
-                            <div className={classes.containerCover}>
-                                <img src={item.cover} alt="cover" className={classes.image}/>
-                            </div>
-                            <div className={classes.containerText}>
-                                <Typography variant="h4" color="initial">
-                                    {item.nombre}
-                                </Typography>
-                                <p>
-                                    {item.descripcion}
-                                </p>
+                            <div className={classes.container}>
+                                <div className={classes.containerCover}>
+                                    <img src={item.cover} alt="cover" className={classes.image}/>
+                                </div>
+                                <div className={classes.containerText}>
+                                   <div className={classes.Title}>
+                                        <Typography variant="h4" color="initial">
+                                            {item.nombre} (2020)
+                                        </Typography>
+                                        
+                                        <span>Suspenso, Terror, Accion</span>
+                                   </div>
+                                    <div className={classes.containerPuntuacion}>
+                                        <div className={classes.puntuacion}>
+                                            <span className={classes.span}><StarIcon/></span> <p className={classes.number}>9.5/10</p>
+
+                                        </div>
+                                    </div>
+                                    <div className={classes.containerDescripcion}>
+                                        <Typography variant="h5">
+                                            Descripcion
+                                        </Typography>
+                                        <p className={classes.p}>
+                                            {item.descripcion}
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                         </Container>
                     ))
