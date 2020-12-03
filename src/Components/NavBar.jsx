@@ -48,7 +48,7 @@ const useStyles = makeStyles((theme) => ({
     },
     borderRadius:theme.shape.borderRadius,
     
-    transition: theme.transitions.create('width'),
+    transition:'1s',
     '&:focus':{
         boxShadow:'inset 0 0 0 2px #f5c518',
         

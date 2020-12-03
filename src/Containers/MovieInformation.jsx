@@ -6,6 +6,9 @@ import {useParams} from 'react-router-dom'
 import Typography from '@material-ui/core/Typography'
 import Chip from '@material-ui/core/Chip'
 import StarIcon from '@material-ui/icons/Star';
+import Tabla from '../Components/Tabla'
+import { Grid, Paper } from '@material-ui/core';
+import TabCo from '../Components/TabCo'
 
 const useStyles = makeStyles((theme)=>({
     root:{
@@ -61,8 +64,25 @@ const useStyles = makeStyles((theme)=>({
         color:'#f5c518'
     },
     Title:{
-        padding:'30px 0'
+        padding:'30px 0',
+        color:'#f5c518'
+    },
+    containerTable:{
+        width:'90%',
+        margin:'0 auto'
+    },
+    Paper:{
+      backgroundColor:'#121212',
+      borderRadius:theme.shape.bordeRadius,
+      padding:'20px',
+      marginBottom:'10px'
+    },
+    titleco:{
+        color:'#f5c518',
+        fontSize:'1rem',
+        listStyle:'underline'
     }
+   
 }))
 
 const Container = styled.div`
@@ -118,6 +138,25 @@ const MovieInformation = ({movie}) => {
                         </Container>
                     ))
                 }
+            </div>
+            <div className={classes.containerTable}>
+               <Grid container spacing={2}>
+                    <Grid item xs={12} lg={9}>
+                        <Paper className={classes.Paper}>
+                            <Typography variant="h4" className={classes.Title} color="initial">Descargas</Typography>
+                            <Tabla idioma="Espanol latino" formato=".mp4" size="1.20GB" servidor="Mega"/>
+                        </Paper>
+                      
+                    </Grid>
+                    <Grid item xs={12} lg={3}>
+                        <Paper className={classes.Paper}>
+
+                        </Paper>
+                    </Grid>
+                    <Grid item xs={12} lg={9}>
+                        <TabCo/>
+                    </Grid>
+               </Grid>
             </div>
         </Fragment>
     )

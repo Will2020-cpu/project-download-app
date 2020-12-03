@@ -7,3 +7,57 @@
 body{
     background-color:  #000;
 }
+
+table{
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead{
+    color: #f5c518;
+}
+
+thead th:nth-child(1){
+    width: 20%;
+}
+
+thead th:nth-child(2){
+    width: 20%;
+}
+
+thead th:nth-child(3){
+    width: 15%;
+}
+
+
+
+th,td{
+    padding: 20px;
+}
+
+th{
+    letter-spacing: 1px;
+}
+
+td{
+    letter-spacing: 1px;
+}
+
+tbody{
+    color: #fff;
+}
+
+tbody td{
+    text-align: center;
+    
+}
+
+thead{
+    border-bottom: 2px solid #f5c518;
+    border-top: 1px solid #f5c518;
+}
+
+tbody tr:nth-child(1){
+    border-bottom: 1px solid #ccc;
+}
