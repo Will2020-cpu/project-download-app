@@ -1,10 +1,9 @@
 import React from 'react'
 import Carousel from '../Components/Carousel/Carousel'
-import NavBar from '../Components/NavBar'
 import {makeStyles} from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
 import Slider from '../Components/Slider'
-
+import {Link} from 'react-router-dom'
 
 const useStyles = makeStyles((theme) => ({
     root:{
@@ -30,6 +29,16 @@ const useStyles = makeStyles((theme) => ({
     section:{
         color: '#f5c518',
         margin:'20px 0'
+    },
+    links:{
+        color:'#f5c518',
+        textDecoration:'none',
+        fontWeight:theme.typography.fontWeightRegular,
+        fontSize:theme.typography.pxToRem(28),
+        margin:'60px 0',
+        '&:hover':{
+            color:theme.palette.common.white,
+        }
     }
 }))
 
@@ -42,11 +51,11 @@ const Home = () => {
                     <Carousel/>
                 </div>
                 <div className={classes.section}>
-                    <Typography variant="h4" color="initial" className={classes.section}>Mas Descargados</Typography>
+                    <Link to="/series" className={classes.links}>Series</Link>
                     <Slider/>
                 </div>
                 <div className={classes.section}>
-                    <Typography variant="h4" color="initial" className={classes.section}>Top Peliculas</Typography>
+                    <Link to='/peliculas' className={classes.links}>Peliculas</Link>
                     <Slider/>
                 </div>
             </main>
