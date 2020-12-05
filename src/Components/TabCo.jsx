@@ -22,7 +22,7 @@ function TabPanel(props) {
       >
         {value === index && (
           <Box p={3}>
-            <Typography>{children}</Typography>
+            {children}
           </Box>
         )}
       </div>
@@ -69,7 +69,8 @@ const useStyles = makeStyles((theme) => ({
   },
   iniciar: {
     paddingRight: theme.spacing(3),
-    fontWeight:theme.typography.fontWeighRegular
+    fontWeight:theme.typography.fontWeighRegular,
+    fontSize:theme.typography.pxToRem(16),
   },
   
   demo2: {
@@ -111,7 +112,6 @@ const useStyles = makeStyles((theme) => ({
 export default function CustomizedTabs() {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
-
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
@@ -123,7 +123,7 @@ export default function CustomizedTabs() {
           <StyledTab label="0 Comentarios" />
           <StyledTab label="6 Comentarios de amigos" />
         </StyledTabs>
-          <Typography className={classes.iniciar}>Inicia sesion</Typography>
+          <Typography className={classes.iniciar} variant="h5">Inicia sesion</Typography>
       </div>
       <TabPanel value={value} index={0}>
             <div className={classes.container}>

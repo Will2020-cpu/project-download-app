@@ -1,4 +1,4 @@
-import react from 'react';
+import React from 'react';
 import Routes from './routes'
 import NavBar from './Components/NavBar'
 import {Provider} from 'react-redux'

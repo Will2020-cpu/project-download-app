@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useState } from 'react'
 import {connect} from 'react-redux'
 import {makeStyles} from '@material-ui/core/styles'
 import styled from 'styled-components';
@@ -7,8 +7,12 @@ import Typography from '@material-ui/core/Typography'
 import Chip from '@material-ui/core/Chip'
 import StarIcon from '@material-ui/icons/Star';
 import Tabla from '../Components/Tabla'
-import { Grid, Paper } from '@material-ui/core';
+import { Grid, Paper, Button } from '@material-ui/core';
 import TabCo from '../Components/TabCo'
+import SimpleDialog from '../Components/Dialog'
+import BtnPlayStyles from '../Components/Botones/BtnPlay'
+import PlayCircleOutlineIcon from '@material-ui/icons/PlayCircleOutline';
+
 
 const useStyles = makeStyles((theme)=>({
     root:{
@@ -64,7 +68,7 @@ const useStyles = makeStyles((theme)=>({
         color:'#f5c518'
     },
     Title:{
-        padding:'30px 0',
+        padding:'10px 0',
         color:'#f5c518'
     },
     containerTable:{
@@ -81,6 +85,13 @@ const useStyles = makeStyles((theme)=>({
         color:'#f5c518',
         fontSize:'1rem',
         listStyle:'underline'
+    },
+    padding:{
+        marginTop:'40px',
+    },
+    chip:{
+        color:'#fff',
+        border:'1px solid #f5c518'
     }
    
 }))
@@ -100,6 +111,17 @@ const Container = styled.div`
 const MovieInformation = ({movie}) => {
    const classes = useStyles()
    let {peliculaID} = useParams()
+   const BtnStyles = BtnPlayStyles()
+   const [open,setOpen] = useState(false)
+   const handleClickOpen  = () =>{
+       setOpen(true);
+   }
+   const handleClikOnClose =() =>{
+       setOpen(false)
+   }
+const renderVideo =(
+    <iframe width="853" height="480" src="https://www.youtube.com/embed/HYGkC4uyy9k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+)
    const arraySeleccionado = movie.filter(pelicula => pelicula.ruta=== peliculaID.trimStart())
     return (
         <Fragment>
@@ -121,8 +143,9 @@ const MovieInformation = ({movie}) => {
                                    </div>
                                     <div className={classes.containerPuntuacion}>
                                         <div className={classes.puntuacion}>
-                                            <span className={classes.span}><StarIcon/></span> <p className={classes.number}>9.5/10</p>
-
+                                            <span className={classes.span}><StarIcon/></span> 
+                                            <p className={classes.number}>9.5/10</p>
+                                            <Button onClick={handleClickOpen} classes={BtnStyles}><PlayCircleOutlineIcon/> Reproducir Trailer</Button>
                                         </div>
                                     </div>
                                     <div className={classes.containerDescripcion}>
@@ -135,6 +158,8 @@ const MovieInformation = ({movie}) => {
                                     </div>
                                 </div>
                             </div>
+                            <SimpleDialog open={open} onClose={handleClikOnClose} URL={renderVideo}/>
+                            
                         </Container>
                     ))
                 }
@@ -150,10 +175,21 @@ const MovieInformation = ({movie}) => {
                     </Grid>
                     <Grid item xs={12} lg={3}>
                         <Paper className={classes.Paper}>
+                            <Typography variant="h5" className={classes.Title}>Categoria</Typography>
+                            <Chip
+                                    variant="outlined"
+                                    size="small"
+                                    label="Suspenso"
+                                    component="a"
+                                    href="#chip"
+                                    clickable
+                                    className={classes.chip}
+                            />
 
                         </Paper>
                     </Grid>
-                    <Grid item xs={12} lg={9}>
+                    <Grid item xs={12} lg={9} >
+                        
                         <TabCo/>
                     </Grid>
                </Grid>
