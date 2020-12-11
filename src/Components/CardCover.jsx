@@ -3,7 +3,6 @@ import {makeStyles} from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
 import StarIcon from '@material-ui/icons/Star';
 import { Redirect } from 'react-router-dom';
-import cx from 'clsx';
 import { connect } from 'react-redux';
 
 
@@ -74,7 +73,7 @@ const CardCover = ({img,nombre,Movies}) => {
                 <div className={classes.media}>
                     <img src={img} alt="cover" className={classes.image}/>
                 </div>
-                {click ? <Redirect to={cx('/pelicula/',cover)}/> : null}
+                {click ? <Redirect to={`/pelicula/${cover}`}/> : null}
                 <div className={classes.Containertitle}>
                     <div className={classes.span}><StarIcon className={classes.icon}/> 9.5</div>
                     <Typography variant="body1" color="initial" className={classes.title}>

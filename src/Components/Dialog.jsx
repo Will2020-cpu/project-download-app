@@ -1,38 +1,49 @@
-import React from 'react';
-import PropTypes from 'prop-types'
-import Dialog from '@material-ui/core/Dialog'
-import { DialogContent } from '@material-ui/core';
+import {React,useState} from 'react'
+import { StaticDialog} from 'react-st-modal';
+import ButtonStyles from './Botones/BtnPlay'
+import {Button} from '@material-ui/core'
+import PlayCircleOutlineIcon from '@material-ui/icons/PlayCircleOutline';
 import {makeStyles} from '@material-ui/core/styles'
 
 
 const useStyles = makeStyles((theme)=>({
-  root:{
-    backgroundColor:'#121212'
-  }
+  Modal:{
+    maxWidth:'853px',
+    height:'480',
+    borderRadius:0,
+    backgroundColor:'transparent'
+  },
 }))
 
-function SimpleDialog(props) {
-    const { onClose,  open , URL} = props;
-    const classes  = useStyles()
-    const handleClose = () => {
-      onClose(open);
-    };
-    
+function SimpleDialog({url}) {
+  const [isOpen, setOpen] = useState(false);
+  const classes = useStyles()
+  const botonPlay = ButtonStyles()
+  return (
+    <div>
+      <StaticDialog
+        isOpen={isOpen}
+        className={classes.Modal}
+        onAfterClose={() => {
+          setOpen(false);
+          // do something with dialog result
+        }}
+      >
+        {/* see previous demo */}
+        <div>
+          {url}
+        </div>
+      </StaticDialog>
+      <Button
+        onClick={() => {
+          setOpen(true);
+        }}
+        classes={botonPlay}
+      >
+        <PlayCircleOutlineIcon/> Reproducir Trailer
+      </Button>
+    </div>
+  );
+}
 
-
-    return (
-      <Dialog onClose={handleClose} aria-labelledby="simple-dialog-title" open={open} URL={URL} maxWidth="xl">
-          <DialogContent className={classes.root}>
-          {URL}
-          </DialogContent>
-      </Dialog>
-    );
-  }
-  
-  SimpleDialog.propTypes = {
-    onClose: PropTypes.func.isRequired,
-    open: PropTypes.bool.isRequired,
-    URL : PropTypes.func.isRequired,
-  };
-  
 export default SimpleDialog

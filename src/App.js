@@ -7,7 +7,6 @@ import store from './Redux/store'
 function App() {
   return (
     <Provider store={store}>
-        <NavBar/>
         <Routes/>
     </Provider>
   );

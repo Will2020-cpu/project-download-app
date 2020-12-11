@@ -1,7 +1,6 @@
 import React from 'react'
 import Carousel from '../Components/Carousel/Carousel'
 import {makeStyles} from '@material-ui/core/styles'
-import Typography from '@material-ui/core/Typography'
 import Slider from '../Components/Slider'
 import {Link} from 'react-router-dom'
 

@@ -10,8 +10,8 @@ import Tabla from '../Components/Tabla'
 import { Grid, Paper, Button } from '@material-ui/core';
 import TabCo from '../Components/TabCo'
 import SimpleDialog from '../Components/Dialog'
-import BtnPlayStyles from '../Components/Botones/BtnPlay'
-import PlayCircleOutlineIcon from '@material-ui/icons/PlayCircleOutline';
+
+
 
 
 const useStyles = makeStyles((theme)=>({
@@ -111,16 +111,9 @@ const Container = styled.div`
 const MovieInformation = ({movie}) => {
    const classes = useStyles()
    let {peliculaID} = useParams()
-   const BtnStyles = BtnPlayStyles()
-   const [open,setOpen] = useState(false)
-   const handleClickOpen  = () =>{
-       setOpen(true);
-   }
-   const handleClikOnClose =() =>{
-       setOpen(false)
-   }
+
 const renderVideo =(
-    <iframe width="853" height="480" src="https://www.youtube.com/embed/HYGkC4uyy9k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="853" height="480" title ="video" src="https://www.youtube.com/embed/HYGkC4uyy9k" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
 )
    const arraySeleccionado = movie.filter(pelicula => pelicula.ruta=== peliculaID.trimStart())
     return (
@@ -145,7 +138,7 @@ const renderVideo =(
                                         <div className={classes.puntuacion}>
                                             <span className={classes.span}><StarIcon/></span> 
                                             <p className={classes.number}>9.5/10</p>
-                                            <Button onClick={handleClickOpen} classes={BtnStyles}><PlayCircleOutlineIcon/> Reproducir Trailer</Button>
+                                            <SimpleDialog url={renderVideo}/>
                                         </div>
                                     </div>
                                     <div className={classes.containerDescripcion}>
@@ -158,7 +151,7 @@ const renderVideo =(
                                     </div>
                                 </div>
                             </div>
-                            <SimpleDialog open={open} onClose={handleClikOnClose} URL={renderVideo}/>
+                            
                             
                         </Container>
                     ))
