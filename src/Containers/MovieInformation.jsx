@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react'
+import React, { Fragment} from 'react'
 import {connect} from 'react-redux'
 import {makeStyles} from '@material-ui/core/styles'
 import styled from 'styled-components';
@@ -7,7 +7,7 @@ import Typography from '@material-ui/core/Typography'
 import Chip from '@material-ui/core/Chip'
 import StarIcon from '@material-ui/icons/Star';
 import Tabla from '../Components/Tabla'
-import { Grid, Paper, Button } from '@material-ui/core';
+import { Grid, Paper} from '@material-ui/core';
 import TabCo from '../Components/TabCo'
 import SimpleDialog from '../Components/Dialog'
 

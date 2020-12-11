@@ -101,10 +101,14 @@ const useStyles = makeStyles((theme) => ({
     textDecoration:'none',
     textTransform:'uppercase',
     fontSize:'0.9rem',
-    fontWeight:'800',  
+    fontWeight:'700',
+    margin:'0 5px', 
     '&:hover':{
       color:'#f5c518',
     }
+  },
+  active:{
+    color:'#f5c518',
   },
   IconButton:{
     display:'none',
@@ -144,6 +148,8 @@ export default function PrimarySearchAppBar() {
                 <NavLink to='/' className={classes.Buttons}>
                     Inicio
                 </NavLink>
+                <NavLink to='/pelicula' className={classes.Buttons} activeClassName={classes.active}>Peliculas</NavLink>
+                <NavLink to='/series' className={classes.Buttons} activeClassName={classes.active}>Series</NavLink>
 
             </div>
          </div>
