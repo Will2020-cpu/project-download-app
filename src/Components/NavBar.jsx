@@ -164,10 +164,9 @@ export default function PrimarySearchAppBar() {
               <NavLink to='/login' className={classes.Buttons}>
                   Iniciar sesion
               </NavLink>
-              
-              <Button variant="text" color="primary" className={classes.botonS}>
-                  Registrarse
-              </Button>
+              <NavLink to="/registrar" className={classes.Buttons}>
+                Registrarse
+              </NavLink>
           </div>
 
         </Toolbar>

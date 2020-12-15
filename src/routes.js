@@ -6,6 +6,7 @@ import Login from './Containers/Login';
 import MovieInformation from './Containers/MovieInformation'
 import PageError from './Containers/PageError';
 import NavBar from './Components/NavBar'
+import Singup from './Containers/Singup';
 
 const Routes = () =>{
     return(
@@ -17,6 +18,7 @@ const Routes = () =>{
                 </Fragment>
             )}/>
             <Route  path='/login' component={Login}/>
+            <Route  path='/registrar' component={Singup}/>
             <Route path='/pelicula/:peliculaID' render={()=>(
                 <Fragment>
                     <NavBar/>

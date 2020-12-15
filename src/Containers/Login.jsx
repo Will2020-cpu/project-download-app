@@ -95,7 +95,7 @@ const Login = () => {
                         <Typography variant="body2" className={classes.title}>
                             No tienes cuenta ? 
                         </Typography>
-                        <Link to="/" className={classes.Link}>Registrarse</Link>
+                        <Link to="/registrar" className={classes.Link}>Registrarse</Link>
                     </div>
                 </Paper>
             </div>
