@@ -92,9 +92,7 @@ const Login = () => {
                         <Button className={classes.button}>Iniciar sesión</Button>
                     </form>
                     <div className={classes.containerRegistrar}>
-                        <Typography variant="body2" className={classes.title}>
-                            No tienes cuenta ? 
-                        </Typography>
+                        <p>No tienes cuenta ?</p>
                         <Link to="/registrar" className={classes.Link}>Registrarse</Link>
                     </div>
                 </Paper>

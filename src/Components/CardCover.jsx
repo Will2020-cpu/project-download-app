@@ -43,7 +43,8 @@ const useStyles = makeStyles((theme) =>({
     },
     title:{
         color:'#fff',
-        fontSize:'0.9rem'
+        fontSize:'0.9rem',
+        textOverflow:'ellipsis'
     },
     span:{
         color:'#fff',
@@ -73,7 +74,7 @@ const CardCover = ({img,nombre,Movies}) => {
                 <div className={classes.media}>
                     <img src={img} alt="cover" className={classes.image}/>
                 </div>
-                {click ? <Redirect to={`/pelicula/${cover}`}/> : null}
+                {click ? <Redirect push to={`/pelicula/${cover}`}/> : null}
                 <div className={classes.Containertitle}>
                     <div className={classes.span}><StarIcon className={classes.icon}/> 9.5</div>
                     <Typography variant="body1" color="initial" className={classes.title}>

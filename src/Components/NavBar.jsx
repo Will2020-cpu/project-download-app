@@ -6,10 +6,8 @@ import Typography from '@material-ui/core/Typography';
 import InputBase from '@material-ui/core/InputBase';
 import SearchIcon from '@material-ui/icons/Search';
 import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
 import { NavLink } from 'react-router-dom';
-
+import Drawer from '../Components/Drawer';
 
 const useStyles = makeStyles((theme) => ({
   grow: {
@@ -138,9 +136,7 @@ export default function PrimarySearchAppBar() {
       <AppBar position="sticky" className={classes.root}>
         <Toolbar className={classes.appBar}>
          <div className={classes.containerTitle}>
-           <IconButton aria-label="search" className={classes.IconButton}>
-              <MenuIcon/>
-           </IconButton>
+              <Drawer/>
             <Typography variant="body2" color="initial" className={classes.title} noWrap>
               Test
             </Typography>
@@ -150,7 +146,6 @@ export default function PrimarySearchAppBar() {
                 </NavLink>
                 <NavLink to='/pelicula' className={classes.Buttons} activeClassName={classes.active}>Peliculas</NavLink>
                 <NavLink to='/series' className={classes.Buttons} activeClassName={classes.active}>Series</NavLink>
-
             </div>
          </div>
           <div className={classes.search}>
